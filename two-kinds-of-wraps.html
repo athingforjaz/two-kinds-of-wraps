@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wraps two ways</title>
+    <style>
+        .bigbox-grid {
+            display: grid;
+            grid-template-columns: 52px 52px 52px;
+            padding: 10px;
+        }
+        .bigbox-flex {
+            width: 158px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .smallbox {           
+            height: 50px;
+            width: 50px;
+            background-color: yellow;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius:10px 10px 10px 10px;
+        }
+        .biggestbox {
+            display: flex;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>What's the difference between Grid and Flexbox?</h1>
+    <h2>These boxes are aligned with display: grid!</h2>
+    <div class="biggestbox">
+        <div class="bigbox-grid">
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+        </div>
+        <div class="explainer"> 
+            .bigbox-grid { <br>
+            display: grid; <br>
+            grid-template-columns: 52px 52px 52px; <br>
+            } <br>
+        </div>
+    </div>
+    <h2>These boxes are aligned with display: flex!</h2>
+    <div class="biggestbox">
+        <div class="bigbox-flex">
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+            <div class="smallbox"></div>
+        </div>
+        <div class="explainer">
+            .bigbox-flex { <br>
+            width: 158px; <br>
+            display: flex; <br>
+            align-content: center; <br>
+            justify-content: center; <br>
+            flex-wrap: wrap;<br>
+            }
+        </div>
+    </div>
+</body>
+</html>
